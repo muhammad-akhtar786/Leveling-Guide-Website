@@ -1,0 +1,35 @@
+<svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="pr1 pr2">
+  <title id="pr1">Role of primer between substrate and self-leveling concrete</title>
+  <desc id="pr2">Cross-section showing a porous substrate, a thin primer layer sealing it, and the self-leveling concrete poured on top.</desc>
+  <defs>
+    <pattern id="hatch2" width="10" height="10" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+      <rect width="10" height="10" fill="#FCE8D5"/>
+      <line x1="0" y1="0" x2="0" y2="10" stroke="#E8CFC0" stroke-width="2"/>
+    </pattern>
+  </defs>
+  <rect width="760" height="300" fill="#FFF7ED"/>
+
+  <!-- substrate -->
+  <rect x="120" y="190" width="520" height="70" fill="url(#hatch2)" stroke="#A17B67" stroke-width="1.5"/>
+  <text x="140" y="230" font-family="Manrope, sans-serif" font-size="14" font-weight="700" fill="#2B1712">POROUS SUBSTRATE</text>
+
+  <!-- pores as dots pulling moisture -->
+  <circle cx="220" cy="205" r="3" fill="#E8CFC0"/>
+  <circle cx="260" cy="215" r="3" fill="#E8CFC0"/>
+  <circle cx="320" cy="200" r="3" fill="#E8CFC0"/>
+  <circle cx="400" cy="212" r="3" fill="#E8CFC0"/>
+  <circle cx="480" cy="204" r="3" fill="#E8CFC0"/>
+  <circle cx="560" cy="214" r="3" fill="#E8CFC0"/>
+
+  <!-- primer layer -->
+  <rect x="120" y="182" width="520" height="8" fill="#7A1712"/>
+  <text x="660" y="190" font-family="Manrope, sans-serif" font-size="13" font-weight="800" fill="#7A1712">← Primer</text>
+
+  <!-- self-leveler -->
+  <rect x="120" y="120" width="520" height="62" fill="#B52A1F" opacity="0.9"/>
+  <text x="380" y="158" text-anchor="middle" font-family="Manrope, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">SELF-LEVELING CONCRETE</text>
+
+  <!-- annotation -->
+  <text x="120" y="60" font-family="Manrope, sans-serif" font-size="20" font-weight="800" fill="#7A1712">What Primer Actually Does</text>
+  <text x="120" y="85" font-family="Inter, sans-serif" font-size="14" fill="#765A50">Seals the substrate so it can't pull water unevenly from the wet pour above it</text>
+</svg>

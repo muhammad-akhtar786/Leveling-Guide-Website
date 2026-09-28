@@ -1,0 +1,63 @@
+<svg viewBox="0 0 900 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="p1 p2">
+  <title id="p1">Self-leveling concrete application process</title>
+  <desc id="p2">Five step process: prep, prime, mix, pour and spread, then cure.</desc>
+  <rect width="900" height="260" fill="#FFF7ED"/>
+
+  <!-- connecting line -->
+  <line x1="90" y1="90" x2="810" y2="90" stroke="#E8CFC0" stroke-width="2" stroke-dasharray="6,6"/>
+
+  <!-- step template repeated -->
+  <!-- 1 Prep -->
+  <g transform="translate(30,30)">
+    <circle cx="60" cy="60" r="46" fill="#7A1712"/>
+    <path d="M40,80 L80,40 M40,40 L80,80" stroke="#F06A2A" stroke-width="0" />
+    <path d="M38,78 L46,86 L84,48 L76,40 Z" fill="#FFFFFF"/>
+    <line x1="34" y1="82" x2="42" y2="90" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/>
+    <text x="60" y="132" text-anchor="middle" font-family="Manrope, sans-serif" font-size="15" font-weight="800" fill="#7A1712">1. Prep</text>
+    <text x="60" y="152" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#765A50">Clean &amp; repair</text>
+    <text x="60" y="168" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#765A50">the subfloor</text>
+  </g>
+
+  <!-- 2 Prime -->
+  <g transform="translate(210,30)">
+    <circle cx="60" cy="60" r="46" fill="#7A1712"/>
+    <rect x="44" y="34" width="10" height="26" rx="2" fill="#FFFFFF"/>
+    <rect x="36" y="58" width="26" height="14" rx="2" fill="#FFFFFF"/>
+    <rect x="30" y="72" width="60" height="10" rx="2" fill="#F06A2A"/>
+    <text x="60" y="132" text-anchor="middle" font-family="Manrope, sans-serif" font-size="15" font-weight="800" fill="#7A1712">2. Prime</text>
+    <text x="60" y="152" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#765A50">Seal the</text>
+    <text x="60" y="168" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#765A50">substrate</text>
+  </g>
+
+  <!-- 3 Mix -->
+  <g transform="translate(390,30)">
+    <circle cx="60" cy="60" r="46" fill="#7A1712"/>
+    <path d="M40,40 L80,40 L74,82 L46,82 Z" fill="none" stroke="#FFFFFF" stroke-width="4"/>
+    <line x1="60" y1="30" x2="60" y2="80" stroke="#F06A2A" stroke-width="4"/>
+    <line x1="52" y1="66" x2="68" y2="66" stroke="#F06A2A" stroke-width="4"/>
+    <text x="60" y="132" text-anchor="middle" font-family="Manrope, sans-serif" font-size="15" font-weight="800" fill="#7A1712">3. Mix</text>
+    <text x="60" y="152" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#765A50">To the exact</text>
+    <text x="60" y="168" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#765A50">water ratio</text>
+  </g>
+
+  <!-- 4 Pour -->
+  <g transform="translate(570,30)">
+    <circle cx="60" cy="60" r="46" fill="#7A1712"/>
+    <path d="M38,36 L82,36 L74,58 L66,58 L66,84 L54,84 L54,58 L46,58 Z" fill="#FFFFFF"/>
+    <path d="M58,58 C58,70 50,72 50,82" stroke="#F06A2A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <text x="60" y="132" text-anchor="middle" font-family="Manrope, sans-serif" font-size="15" font-weight="800" fill="#7A1712">4. Pour &amp; Spread</text>
+    <text x="60" y="152" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#765A50">Low point first,</text>
+    <text x="60" y="168" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#765A50">then de-air</text>
+  </g>
+
+  <!-- 5 Cure -->
+  <g transform="translate(750,30)">
+    <circle cx="60" cy="60" r="46" fill="#7A1712"/>
+    <circle cx="60" cy="60" r="26" fill="none" stroke="#FFFFFF" stroke-width="4"/>
+    <line x1="60" y1="60" x2="60" y2="42" stroke="#F06A2A" stroke-width="4" stroke-linecap="round"/>
+    <line x1="60" y1="60" x2="74" y2="66" stroke="#F06A2A" stroke-width="4" stroke-linecap="round"/>
+    <text x="60" y="132" text-anchor="middle" font-family="Manrope, sans-serif" font-size="15" font-weight="800" fill="#7A1712">5. Cure</text>
+    <text x="60" y="152" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#765A50">Protect from</text>
+    <text x="60" y="168" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#765A50">drafts &amp; traffic</text>
+  </g>
+</svg>

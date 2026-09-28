@@ -1,0 +1,70 @@
+<svg viewBox="0 0 760 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="tt1 tt2">
+  <title id="tt1">Core self-leveling concrete tools</title>
+  <desc id="tt2">Six labeled tools: gauge rake, spiked roller, mixing drill and paddle, primer roller, moisture meter, and mixing buckets.</desc>
+  <rect width="760" height="420" fill="#FFF7ED"/>
+
+  <!-- grid of 6 cards -->
+  <!-- Card template: x,y at 0,0 250x180 -->
+  <g transform="translate(20,20)">
+    <rect width="220" height="170" rx="3" fill="#FFFFFF" stroke="#E8CFC0"/>
+    <line x1="40" y1="60" x2="180" y2="60" stroke="#7A1712" stroke-width="6" stroke-linecap="round"/>
+    <line x1="110" y1="60" x2="110" y2="30" stroke="#7A1712" stroke-width="6" stroke-linecap="round"/>
+    <line x1="55" y1="60" x2="55" y2="80" stroke="#F06A2A" stroke-width="5" stroke-linecap="round"/>
+    <line x1="75" y1="60" x2="75" y2="82" stroke="#F06A2A" stroke-width="5" stroke-linecap="round"/>
+    <line x1="95" y1="60" x2="95" y2="80" stroke="#F06A2A" stroke-width="5" stroke-linecap="round"/>
+    <line x1="115" y1="60" x2="115" y2="82" stroke="#F06A2A" stroke-width="5" stroke-linecap="round"/>
+    <line x1="135" y1="60" x2="135" y2="80" stroke="#F06A2A" stroke-width="5" stroke-linecap="round"/>
+    <line x1="155" y1="60" x2="155" y2="82" stroke="#F06A2A" stroke-width="5" stroke-linecap="round"/>
+    <line x1="175" y1="60" x2="175" y2="80" stroke="#F06A2A" stroke-width="5" stroke-linecap="round"/>
+    <text x="110" y="120" text-anchor="middle" font-family="Manrope, sans-serif" font-size="14" font-weight="800" fill="#7A1712">Gauge Rake</text>
+    <text x="110" y="140" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#765A50">Spreads the pour</text>
+  </g>
+
+  <g transform="translate(270,20)">
+    <rect width="220" height="170" rx="3" fill="#FFFFFF" stroke="#E8CFC0"/>
+    <line x1="60" y1="90" x2="160" y2="30" stroke="#7A1712" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="60" cy="90" r="8" fill="#F06A2A"/>
+    <circle cx="80" cy="78" r="8" fill="#F06A2A"/>
+    <circle cx="100" cy="66" r="8" fill="#F06A2A"/>
+    <circle cx="120" cy="54" r="8" fill="#F06A2A"/>
+    <circle cx="140" cy="42" r="8" fill="#F06A2A"/>
+    <text x="110" y="120" text-anchor="middle" font-family="Manrope, sans-serif" font-size="14" font-weight="800" fill="#7A1712">Spiked Roller</text>
+    <text x="110" y="140" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#765A50">De-airs the surface</text>
+  </g>
+
+  <g transform="translate(520,20)">
+    <rect width="220" height="170" rx="3" fill="#FFFFFF" stroke="#E8CFC0"/>
+    <rect x="70" y="40" width="70" height="34" rx="4" fill="#7A1712"/>
+    <rect x="130" y="50" width="18" height="14" rx="2" fill="#7A1712"/>
+    <line x1="105" y1="74" x2="105" y2="100" stroke="#F06A2A" stroke-width="5"/>
+    <line x1="90" y1="95" x2="120" y2="95" stroke="#F06A2A" stroke-width="5"/>
+    <text x="110" y="120" text-anchor="middle" font-family="Manrope, sans-serif" font-size="14" font-weight="800" fill="#7A1712">Drill &amp; Paddle</text>
+    <text x="110" y="140" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#765A50">Low-speed mixing</text>
+  </g>
+
+  <g transform="translate(20,220)">
+    <rect width="220" height="170" rx="3" fill="#FFFFFF" stroke="#E8CFC0"/>
+    <rect x="48" y="40" width="10" height="26" rx="2" fill="#7A1712"/>
+    <rect x="40" y="64" width="26" height="14" rx="2" fill="#7A1712"/>
+    <rect x="34" y="78" width="70" height="10" rx="2" fill="#F06A2A"/>
+    <text x="110" y="120" text-anchor="middle" font-family="Manrope, sans-serif" font-size="14" font-weight="800" fill="#7A1712">Primer Roller</text>
+    <text x="110" y="140" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#765A50">Seals the substrate</text>
+  </g>
+
+  <g transform="translate(270,220)">
+    <rect width="220" height="170" rx="3" fill="#FFFFFF" stroke="#E8CFC0"/>
+    <rect x="70" y="40" width="70" height="46" rx="4" fill="#7A1712"/>
+    <text x="105" y="70" text-anchor="middle" font-family="Manrope, sans-serif" font-size="20" font-weight="800" fill="#F06A2A">%</text>
+    <line x1="105" y1="86" x2="105" y2="100" stroke="#7A1712" stroke-width="5"/>
+    <text x="110" y="120" text-anchor="middle" font-family="Manrope, sans-serif" font-size="14" font-weight="800" fill="#7A1712">Moisture Meter</text>
+    <text x="110" y="140" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#765A50">Checks the substrate</text>
+  </g>
+
+  <g transform="translate(520,220)">
+    <rect width="220" height="170" rx="3" fill="#FFFFFF" stroke="#E8CFC0"/>
+    <path d="M75,45 L145,45 L138,90 L82,90 Z" fill="#7A1712"/>
+    <path d="M85,45 L82,30 L138,30 L135,45" fill="none" stroke="#F06A2A" stroke-width="5"/>
+    <text x="110" y="120" text-anchor="middle" font-family="Manrope, sans-serif" font-size="14" font-weight="800" fill="#7A1712">Mixing Buckets</text>
+    <text x="110" y="140" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#765A50">Measured water &amp; mix</text>
+  </g>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="533" viewBox="0 0 800 533" role="img" aria-labelledby="title desc">
+<title id="title">A floor built in layers</title><desc id="desc">Isometric illustration of a concrete substrate, orange primer, grey self-leveling underlayment, and a tiled floor finish. Layers are not to scale.</desc>
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#edece7"/><stop offset="1" stop-color="#d5d6ce"/></linearGradient><linearGradient id="top" y2="1" x2=".7"><stop stop-color="#e1e0d9"/><stop offset="1" stop-color="#a4a79f"/></linearGradient><filter id="shadow" x="-40%" y="-40%" width="180%" height="200%"><feGaussianBlur stdDeviation="14"/></filter><pattern id="dots" width="9" height="9" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r=".7" fill="#424b41" opacity=".13"/></pattern></defs>
+<rect width="800" height="533" fill="url(#bg)"/><path d="m158 407 241-125 245 122-243 113z" fill="#444b42" opacity=".22" filter="url(#shadow)"/>
+<g stroke-linejoin="round"><path d="m170 330 230 110 230-110-230-110z" fill="#a7aba3"/><path d="m170 330 230 110v43L170 372z" fill="#727b70"/><path d="m400 440 230-110v42L400 483z" fill="#535f54"/><path d="m170 330 230 110 230-110-230-110z" fill="url(#dots)"/>
+<path d="m170 275 230 110 230-110-230-110z" fill="#f3914c"/><path d="m170 275 230 110v7L170 282z" fill="#d65f22"/><path d="m400 385 230-110v7L400 392z" fill="#ac4c21"/>
+<path d="m170 226 230 110 230-110-230-110z" fill="url(#top)"/><path d="m170 226 230 110v22L170 248z" fill="#93988f"/><path d="m400 336 230-110v22L400 358z" fill="#727b70"/>
+<path d="m170 147 230 110 230-110L400 37z" fill="#f5f0e7"/><path d="m170 147 230 110v13L170 160z" fill="#cec7b9"/><path d="m400 257 230-110v13L400 270z" fill="#b5b0a5"/>
+<path d="m247 111 230 110m-153-146 230 110M247 184l230-110M324 220l230-110" fill="none" stroke="#c9c6bc" stroke-width="2"/></g>
+<g font-family="Arial,sans-serif" font-size="12" fill="#465045" letter-spacing="2"><text x="48" y="482">THE FOUNDATION OF A BETTER FLOOR</text><text x="654" y="60">01—04</text></g>
+</svg>

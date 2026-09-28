@@ -1,0 +1,39 @@
+<svg viewBox="0 0 820 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="c1 c2">
+  <title id="c1">Three common causes of self-leveling concrete cracking</title>
+  <desc id="c2">Three cross-section panels: over-depth pour with internal stress cracking, substrate movement transferring a crack upward, and a normal hairline shrinkage crack at a thin featheredge.</desc>
+  <rect width="820" height="300" fill="#FFF7ED"/>
+
+  <!-- Panel 1: Too thick -->
+  <g transform="translate(20,20)">
+    <rect width="240" height="230" rx="3" fill="#FFFFFF" stroke="#E8CFC0"/>
+    <rect x="20" y="170" width="200" height="30" fill="#E8CFC0"/>
+    <rect x="20" y="90" width="200" height="80" fill="#B52A1F" opacity="0.85"/>
+    <path d="M120,90 L112,120 L128,140 L118,170" fill="none" stroke="#2B1712" stroke-width="3"/>
+    <text x="120" y="215" text-anchor="middle" font-family="Manrope, sans-serif" font-size="13" font-weight="800" fill="#2B1712">Poured Too Thick</text>
+    <text x="120" y="232" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#765A50">Uneven cure creates</text>
+    <text x="120" y="246" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#765A50">internal stress</text>
+  </g>
+
+  <!-- Panel 2: substrate movement -->
+  <g transform="translate(290,20)">
+    <rect width="240" height="230" rx="3" fill="#FFFFFF" stroke="#E8CFC0"/>
+    <rect x="20" y="170" width="90" height="30" fill="#E8CFC0"/>
+    <rect x="130" y="176" width="90" height="24" fill="#E8CFC0"/>
+    <rect x="20" y="150" width="200" height="20" fill="#B52A1F" opacity="0.85"/>
+    <path d="M118,150 L112,90" stroke="#2B1712" stroke-width="3" fill="none"/>
+    <text x="120" y="215" text-anchor="middle" font-family="Manrope, sans-serif" font-size="13" font-weight="800" fill="#2B1712">Substrate Movement</text>
+    <text x="120" y="232" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#765A50">A moving joint below</text>
+    <text x="120" y="246" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#765A50">transfers upward</text>
+  </g>
+
+  <!-- Panel 3: normal hairline -->
+  <g transform="translate(560,20)">
+    <rect width="240" height="230" rx="3" fill="#FFFFFF" stroke="#E8CFC0"/>
+    <rect x="20" y="170" width="200" height="30" fill="#E8CFC0"/>
+    <path d="M20,168 L20,166 L120,150 L220,142 L220,168 Z" fill="#B52A1F" opacity="0.85"/>
+    <path d="M60,160 L57,150" stroke="#2B1712" stroke-width="2" fill="none"/>
+    <text x="120" y="215" text-anchor="middle" font-family="Manrope, sans-serif" font-size="13" font-weight="800" fill="#2B1712">Normal Shrinkage</text>
+    <text x="120" y="232" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#765A50">Fine hairline crack at</text>
+    <text x="120" y="246" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#765A50">a thin featheredge</text>
+  </g>
+</svg>

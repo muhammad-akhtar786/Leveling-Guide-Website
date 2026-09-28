@@ -1,0 +1,37 @@
+<svg viewBox="0 0 830 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="u1 u2">
+  <title id="u1">Self-leveling underlayment compared to structural concrete</title>
+  <desc id="u2">Side by side cross-sections: a thin self-leveling underlayment layer over an existing slab, compared to a thick structural concrete slab poured on a gravel sub-base.</desc>
+  <defs>
+    <pattern id="hatch3" width="10" height="10" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+      <rect width="10" height="10" fill="#FCE8D5"/>
+      <line x1="0" y1="0" x2="0" y2="10" stroke="#E8CFC0" stroke-width="2"/>
+    </pattern>
+    <pattern id="gravel" width="14" height="14" patternUnits="userSpaceOnUse">
+      <rect width="14" height="14" fill="#FCE8D5"/>
+      <circle cx="4" cy="4" r="2" fill="#E8CFC0"/>
+      <circle cx="10" cy="9" r="2" fill="#E8CFC0"/>
+    </pattern>
+  </defs>
+  <rect width="830" height="320" fill="#FFF7ED"/>
+
+  <!-- Left: underlayment -->
+  <g transform="translate(30,30)">
+    <text x="160" y="0" text-anchor="middle" font-family="Manrope, sans-serif" font-size="16" font-weight="800" fill="#7A1712">Underlayment (interior floor prep)</text>
+    <rect x="0" y="180" width="320" height="70" fill="url(#hatch3)" stroke="#A17B67" stroke-width="1.5"/>
+    <text x="10" y="220" font-family="Inter, sans-serif" font-size="12" fill="#2B1712">Existing slab</text>
+    <rect x="0" y="160" width="320" height="20" fill="#B52A1F"/>
+    <rect x="0" y="150" width="320" height="10" fill="#7A1712"/>
+    <text x="330" y="168" font-family="Manrope, sans-serif" font-size="12" font-weight="700" fill="#7A1712">← thin,</text>
+    <text x="330" y="185" font-family="Manrope, sans-serif" font-size="12" font-weight="700" fill="#7A1712">~1/8–2 in</text>
+  </g>
+
+  <!-- Right: structural -->
+  <g transform="translate(410,30)">
+    <text x="160" y="0" text-anchor="middle" font-family="Manrope, sans-serif" font-size="16" font-weight="800" fill="#7A1712">Structural Concrete (new slab)</text>
+    <rect x="0" y="220" width="320" height="30" fill="url(#gravel)" stroke="#A17B67" stroke-width="1.5"/>
+    <text x="10" y="240" font-family="Inter, sans-serif" font-size="12" fill="#2B1712">Compacted gravel sub-base</text>
+    <rect x="0" y="120" width="320" height="100" fill="#7A1712"/>
+    <text x="330" y="175" font-family="Manrope, sans-serif" font-size="12" font-weight="700" fill="#7A1712">← thick, 4 in+,</text>
+    <text x="330" y="192" font-family="Manrope, sans-serif" font-size="12" font-weight="700" fill="#7A1712">load-bearing</text>
+  </g>
+</svg>

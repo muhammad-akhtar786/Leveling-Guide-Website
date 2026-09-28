@@ -1,0 +1,43 @@
+<svg viewBox="0 0 820 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t1 t2">
+  <title id="t1">Self-leveling concrete pour depth diagram</title>
+  <desc id="t2">Cross-section showing subfloor, a tapered self-leveling concrete layer from thin featheredge to rated maximum thickness, and a flooring layer on top, with minimum and maximum depth callouts.</desc>
+  <defs>
+    <pattern id="hatch" width="10" height="10" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+      <rect width="10" height="10" fill="#FCE8D5"/>
+      <line x1="0" y1="0" x2="0" y2="10" stroke="#E8CFC0" stroke-width="2"/>
+    </pattern>
+  </defs>
+  <rect width="820" height="420" fill="#FFF7ED"/>
+
+  <!-- subfloor -->
+  <rect x="60" y="300" width="640" height="60" fill="url(#hatch)" stroke="#A17B67" stroke-width="1.5"/>
+  <text x="70" y="345" font-family="Manrope, sans-serif" font-size="14" font-weight="700" fill="#2B1712">EXISTING SUBFLOOR / SLAB</text>
+
+  <!-- tapered self-leveling layer -->
+  <path d="M60,300 L60,296 L250,270 L700,255 L700,300 Z" fill="#B52A1F" opacity="0.85"/>
+  <path d="M60,296 L250,270 L700,255" fill="none" stroke="#7A1712" stroke-width="2"/>
+
+  <!-- flooring layer -->
+  <rect x="230" y="248" width="470" height="10" fill="#7A1712"/>
+  <text x="500" y="240" font-family="Manrope, sans-serif" font-size="13" font-weight="700" fill="#7A1712">FLOORING (TILE / VINYL / WOOD)</text>
+
+  <!-- featheredge label -->
+  <line x1="60" y1="380" x2="60" y2="296" stroke="#765A50" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="30" y="400" font-family="Inter, sans-serif" font-size="13" fill="#765A50">Featheredge</text>
+  <text x="30" y="416" font-family="Inter, sans-serif" font-size="12" fill="#765A50">~1/8 in (3 mm)</text>
+
+  <!-- max depth dimension arrow -->
+  <line x1="700" y1="255" x2="700" y2="300" stroke="#7A1712" stroke-width="1.5"/>
+  <line x1="690" y1="255" x2="710" y2="255" stroke="#7A1712" stroke-width="1.5"/>
+  <line x1="690" y1="300" x2="710" y2="300" stroke="#7A1712" stroke-width="1.5"/>
+  <text x="718" y="270" font-family="Manrope, sans-serif" font-size="13" font-weight="700" fill="#7A1712">Rated max</text>
+  <text x="718" y="286" font-family="Inter, sans-serif" font-size="12" fill="#765A50">depth</text>
+  <text x="718" y="300" font-family="Inter, sans-serif" font-size="12" fill="#765A50">(product-specific)</text>
+
+  <!-- self-leveler label -->
+  <text x="300" y="330" font-family="Manrope, sans-serif" font-size="14" font-weight="800" fill="#2B1712">SELF-LEVELING CONCRETE</text>
+
+  <!-- title -->
+  <text x="60" y="40" font-family="Manrope, sans-serif" font-size="20" font-weight="800" fill="#7A1712">Pour Depth, End to End</text>
+  <text x="60" y="65" font-family="Inter, sans-serif" font-size="14" fill="#765A50">From a near-zero featheredge to the product's rated maximum single-lift depth</text>
+</svg>
