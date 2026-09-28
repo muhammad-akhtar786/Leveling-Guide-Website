@@ -137,11 +137,11 @@ def footer_html(current_route="/"):
     <div class="container">
       <div class="footer-grid">
         <div>
-          <h4>{SITE_NAME}</h4>
-          <p style="font-size:.9rem;color:var(--c-inverse-muted);max-width:32ch;">Practical, research-based guides and calculators for self-leveling concrete, floor leveling, and underlayment work.</p>
+          <h2>{SITE_NAME}</h2>
+          <p style="font-size:0.945rem;color:var(--c-inverse-muted);max-width:32ch;">Practical, research-based guides and calculators for self-leveling concrete, floor leveling, and underlayment work.</p>
         </div>
         <div>
-          <h4>Guides</h4>
+          <h2>Guides</h2>
           <ul>
             <li><a href="{relative_url('/self-leveling-concrete/', current_route)}">Complete Guide</a></li>
             <li><a href="{relative_url('/how-to-use-self-leveling-concrete/', current_route)}">How to Use</a></li>
@@ -152,7 +152,7 @@ def footer_html(current_route="/"):
           </ul>
         </div>
         <div>
-          <h4>Materials &amp; Tools</h4>
+          <h2>Materials &amp; Tools</h2>
           <ul>
             <li><a href="{relative_url('/self-leveling-concrete-underlayment/', current_route)}">Underlayment</a></li>
             <li><a href="{relative_url('/primer-for-self-leveling-concrete/', current_route)}">Primer</a></li>
@@ -161,7 +161,7 @@ def footer_html(current_route="/"):
           </ul>
         </div>
         <div>
-          <h4>Problems &amp; Fixes</h4>
+          <h2>Problems &amp; Fixes</h2>
           <ul>
             <li><a href="{relative_url('/self-leveling-concrete-problems/', current_route)}">Common Problems</a></li>
             <li><a href="{relative_url('/self-leveling-concrete-not-level/', current_route)}">Not Level</a></li>
@@ -169,7 +169,7 @@ def footer_html(current_route="/"):
           </ul>
         </div>
         <div>
-          <h4>Calculators</h4>
+          <h2>Calculators</h2>
           <ul>
             <li><a href="{relative_url('/self-leveling-concrete-calculator/', current_route)}">Material Calculator</a></li>
             <li><a href="{relative_url('/self-leveling-concrete-bag-coverage-calculator/', current_route)}">Bag Coverage</a></li>
@@ -177,7 +177,7 @@ def footer_html(current_route="/"):
           </ul>
         </div>
         <div>
-          <h4>Company</h4>
+          <h2>Company</h2>
           <ul>
             <li><a href="{relative_url('/about/', current_route)}">About</a></li>
             <li><a href="{relative_url('/contact/', current_route)}">Contact</a></li>
@@ -185,7 +185,7 @@ def footer_html(current_route="/"):
           </ul>
         </div>
         <div>
-          <h4>Legal</h4>
+          <h2>Legal</h2>
           <ul>
             <li><a href="{relative_url('/privacy-policy/', current_route)}">Privacy Policy</a></li>
             <li><a href="{relative_url('/terms/', current_route)}">Terms of Use</a></li>
