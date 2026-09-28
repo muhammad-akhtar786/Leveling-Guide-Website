@@ -10,9 +10,9 @@ from html import escape
 from urllib.parse import urlsplit, urljoin
 from seo_data import DESCRIPTIONS
 
-SITE_URL = os.environ.get("SITE_URL", "https://www.levelingguide.com").rstrip("/")
+SITE_URL = os.environ.get("SITE_URL", "https://leveling-guide-website.pages.dev").rstrip("/")
 if urlsplit(SITE_URL).scheme not in ("http", "https") or not urlsplit(SITE_URL).netloc or urlsplit(SITE_URL).path or urlsplit(SITE_URL).query or urlsplit(SITE_URL).fragment:
-    raise ValueError("SITE_URL must be an absolute origin, such as https://www.levelingguide.com")
+    raise ValueError("SITE_URL must be an absolute origin, such as https://leveling-guide-website.pages.dev")
 SITE_NAME = "Leveling Guide"
 ROOT = os.path.dirname(os.path.abspath(__file__))
 LAST_UPDATED = "September 2026"
