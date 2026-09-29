@@ -1,39 +1,6 @@
 // Shared progressive enhancements. Guides and navigation links work without JavaScript.
 (function () {
   'use strict';
-  // Keep the head's gtag queue available immediately, but let rendering/resources
-  // finish before fetching Analytics. The deadline also covers a slow window load.
-  var analyticsRequested = false;
-  var analyticsDeadline;
-  var analyticsIdle;
-  function loadAnalytics() {
-    if (analyticsRequested) return;
-    analyticsRequested = true;
-    window.clearTimeout(analyticsDeadline);
-    if (analyticsIdle && window.cancelIdleCallback) window.cancelIdleCallback(analyticsIdle);
-    window.removeEventListener('load', scheduleAnalytics);
-    document.removeEventListener('visibilitychange', flushAnalytics);
-    if (document.querySelector('script[src^="https://www.googletagmanager.com/gtag/js"]')) return;
-    var script = document.createElement('script');
-    script.async = true;
-    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-EEVCE53BZW';
-    document.head.appendChild(script);
-  }
-  function scheduleAnalytics() {
-    if (analyticsRequested) return;
-    if ('requestIdleCallback' in window) {
-      analyticsIdle = window.requestIdleCallback(loadAnalytics, { timeout: 1000 });
-    } else {
-      window.setTimeout(loadAnalytics, 0);
-    }
-  }
-  function flushAnalytics() {
-    if (document.visibilityState === 'hidden') loadAnalytics();
-  }
-  analyticsDeadline = window.setTimeout(loadAnalytics, 2000);
-  document.addEventListener('visibilitychange', flushAnalytics);
-  if (document.readyState === 'complete') scheduleAnalytics();
-  else window.addEventListener('load', scheduleAnalytics, { once: true });
 
   var toggle = document.querySelector('.nav-toggle');
   var mobileNav = document.querySelector('.mobile-nav');

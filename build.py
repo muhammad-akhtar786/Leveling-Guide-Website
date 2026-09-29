@@ -277,12 +277,12 @@ def page(*, title, description, canonical_path, body, extra_head="", og_type="we
 <head>
 <meta charset="UTF-8">
 <script>
-  document.documentElement.classList.add('has-js');
   window.dataLayer = window.dataLayer || [];
-  function gtag(){{dataLayer.push(arguments);}}
+  window.gtag = window.gtag || function gtag(){{ window.dataLayer.push(arguments); }};
   gtag('js', new Date());
   gtag('config', 'G-EEVCE53BZW');
 </script>
+<script src="{relative_url('/assets/js/analytics.js', current_route)}" defer></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{title}</title>
 <meta name="description" content="{description}">
