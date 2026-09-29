@@ -79,15 +79,17 @@ def normalize_root_relative_urls(html, current_route):
 def nav_html(mobile=False, current_route="/"):
     if not mobile:
         items = []
+        dropdown_index = 0
         for entry in NAV:
             if len(entry) == 3:
                 label, href, children = entry
                 subs = "".join(f'<a href="{relative_url(c[1], current_route)}">{c[0]}</a>' for c in children)
                 items.append(
                     f'<li class="has-dropdown"><a href="{relative_url(href, current_route)}">{label}</a>'
-                    f'<button class="dropdown-toggle" aria-label="Show {label} links" aria-expanded="false">⌄</button>'
-                    f'<div class="dropdown">{subs}</div></li>'
+                    f'<button class="dropdown-toggle" aria-label="Show {label} links" aria-expanded="false" aria-controls="nav-dropdown-{dropdown_index}">⌄</button>'
+                    f'<div class="dropdown" id="nav-dropdown-{dropdown_index}">{subs}</div></li>'
                 )
+                dropdown_index += 1
             else:
                 label, href = entry
                 items.append(f'<li><a href="{relative_url(href, current_route)}">{label}</a></li>')
@@ -274,8 +276,8 @@ def page(*, title, description, canonical_path, body, extra_head="", og_type="we
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-EEVCE53BZW"></script>
 <script>
+  document.documentElement.classList.add('has-js');
   window.dataLayer = window.dataLayer || [];
   function gtag(){{dataLayer.push(arguments);}}
   gtag('js', new Date());
@@ -302,8 +304,7 @@ def page(*, title, description, canonical_path, body, extra_head="", og_type="we
 <meta name="twitter:title" content="{title}">
 <meta name="twitter:description" content="{description}">
 <meta name="twitter:image" content="{SITE_URL}{og_image}">
-<link rel="stylesheet" href="{relative_url('/assets/css/style.css', current_route)}">
-<link rel="stylesheet" href="{relative_url('/assets/css/experience.css', current_route)}">
+<link rel="stylesheet" href="{relative_url('/assets/css/site.min.css', current_route)}">
 <noscript><style>.nav-toggle,.header-search,.viewer-controls,.mobile-nav-head{{display:none}}@media(max-width:960px){{.mobile-nav{{display:block!important;position:static;max-height:none}}}}</style></noscript>
 <script type="application/ld+json">{json.dumps(org)}</script>
 {extra_head}

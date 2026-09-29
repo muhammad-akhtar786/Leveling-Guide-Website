@@ -1,0 +1,19 @@
+{
+  "name": "leveling-guide",
+  "private": true,
+  "scripts": {
+    "build:assets": "node scripts/build-assets.cjs",
+    "build:images": "node scripts/build-images.cjs",
+    "serve": "node scripts/serve.cjs",
+    "test": "node scripts/regression.cjs",
+    "test:analytics": "node scripts/check-analytics.cjs",
+    "audit": "node scripts/performance-audit.mjs"
+  },
+  "engines": { "node": ">=22.19" },
+  "devDependencies": {
+    "clean-css": "5.3.3",
+    "lighthouse": "13.5.0",
+    "playwright": "1.63.0",
+    "sharp": "0.35.5"
+  }
+}

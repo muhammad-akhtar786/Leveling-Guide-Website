@@ -1,6 +1,5 @@
 /* Neumorphic publication layout. Shared tokens live in style.css. */
 html { scroll-padding-top: 110px; }
-body { font-size: 16.8px; }
 h1, h2, h3, h4 { color: var(--text); letter-spacing: -.035em; }
 h2 { font-size: clamp(1.874rem,3.308vw,2.756rem); line-height: 1.25; }
 button, input, select, textarea { font: inherit; }
@@ -101,6 +100,8 @@ a { transition: color var(--transition); }
 /* Publication sections and quick estimate. */
 .section { padding: var(--space-6) 0; }
 .plan-grid, .layer-grid, .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+/* This card is the taller column. Keep its top stable while HTML is parsed. */
+.quick-calc-wrap { align-self: start; }
 .section-intro h2 { margin: 0 0 20px; }
 .section-intro > p:not(.eyebrow) { color: var(--text-muted); font-size: 15.75px; line-height: 1.85; max-width: 43ch; }
 .text-link-list { display: flex; flex-direction: column; margin-top: 24px; }

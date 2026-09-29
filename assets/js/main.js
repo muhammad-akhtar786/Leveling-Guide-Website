@@ -1,9 +1,43 @@
 // Shared progressive enhancements. Guides and navigation links work without JavaScript.
 (function () {
   'use strict';
-  document.documentElement.classList.add('has-js');
+  // Keep the head's gtag queue available immediately, but let rendering/resources
+  // finish before fetching Analytics. The deadline also covers a slow window load.
+  var analyticsRequested = false;
+  var analyticsDeadline;
+  var analyticsIdle;
+  function loadAnalytics() {
+    if (analyticsRequested) return;
+    analyticsRequested = true;
+    window.clearTimeout(analyticsDeadline);
+    if (analyticsIdle && window.cancelIdleCallback) window.cancelIdleCallback(analyticsIdle);
+    window.removeEventListener('load', scheduleAnalytics);
+    document.removeEventListener('visibilitychange', flushAnalytics);
+    if (document.querySelector('script[src^="https://www.googletagmanager.com/gtag/js"]')) return;
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-EEVCE53BZW';
+    document.head.appendChild(script);
+  }
+  function scheduleAnalytics() {
+    if (analyticsRequested) return;
+    if ('requestIdleCallback' in window) {
+      analyticsIdle = window.requestIdleCallback(loadAnalytics, { timeout: 1000 });
+    } else {
+      window.setTimeout(loadAnalytics, 0);
+    }
+  }
+  function flushAnalytics() {
+    if (document.visibilityState === 'hidden') loadAnalytics();
+  }
+  analyticsDeadline = window.setTimeout(loadAnalytics, 2000);
+  document.addEventListener('visibilitychange', flushAnalytics);
+  if (document.readyState === 'complete') scheduleAnalytics();
+  else window.addEventListener('load', scheduleAnalytics, { once: true });
+
   var toggle = document.querySelector('.nav-toggle');
   var mobileNav = document.querySelector('.mobile-nav');
+  var header = document.querySelector('.site-header');
   function closeNav(restoreFocus) {
     if (!toggle || !mobileNav) return;
     mobileNav.classList.remove('is-open');
@@ -13,10 +47,13 @@
   }
   if (toggle && mobileNav) {
     toggle.addEventListener('click', function () {
-      var open = mobileNav.classList.toggle('is-open');
+      var open = !mobileNav.classList.contains('is-open');
+      // Read before changing menu/ARIA state, which invalidates styles.
+      var bottom = open ? header.getBoundingClientRect().bottom : 0;
+      if (open) mobileNav.style.setProperty('--nav-bottom', bottom + 'px');
+      mobileNav.classList.toggle('is-open', open);
       toggle.setAttribute('aria-expanded', String(open));
       toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-      mobileNav.style.setProperty('--nav-bottom', document.querySelector('.site-header').getBoundingClientRect().bottom + 'px');
       if (open) mobileNav.querySelector('.mobile-close').focus();
     });
     mobileNav.querySelector('.mobile-close').addEventListener('click', function () { closeNav(true); });
@@ -33,7 +70,7 @@
     mobileNav.addEventListener('click', function (event) { if (event.target.closest('a')) closeNav(); });
     window.addEventListener('resize', function () { if (window.innerWidth > 960) closeNav(); });
     window.addEventListener('scroll', function () {
-      if (mobileNav.classList.contains('is-open')) mobileNav.style.setProperty('--nav-bottom', document.querySelector('.site-header').getBoundingClientRect().bottom + 'px');
+      if (mobileNav.classList.contains('is-open')) mobileNav.style.setProperty('--nav-bottom', header.getBoundingClientRect().bottom + 'px');
     }, { passive: true });
   }
   function setDropdown(button, open) {
@@ -41,13 +78,12 @@
     button.parentElement.classList.toggle('is-open', open);
     button.parentElement.classList.toggle('is-closed', !open);
   }
-  document.querySelectorAll('.dropdown-toggle').forEach(function (button, index) {
+  var dropdownButtons = document.querySelectorAll('.dropdown-toggle');
+  dropdownButtons.forEach(function (button) {
     var item = button.parentElement;
-    item.querySelector('.dropdown').id = 'nav-dropdown-' + index;
-    button.setAttribute('aria-controls', 'nav-dropdown-' + index);
     button.addEventListener('click', function () {
       var open = button.getAttribute('aria-expanded') !== 'true';
-      document.querySelectorAll('.dropdown-toggle').forEach(function (other) { setDropdown(other, other === button && open); });
+      dropdownButtons.forEach(function (other) { setDropdown(other, other === button && open); });
     });
     item.addEventListener('mouseenter', function () { if (window.matchMedia('(hover: hover)').matches) setDropdown(button, true); });
     item.addEventListener('mouseleave', function () { if (!item.contains(document.activeElement)) setDropdown(button, false); });
@@ -57,7 +93,7 @@
     });
   });
   document.addEventListener('click', function (event) {
-    document.querySelectorAll('.dropdown-toggle').forEach(function (button) { if (!button.parentElement.contains(event.target)) setDropdown(button, false); });
+    dropdownButtons.forEach(function (button) { if (!button.parentElement.contains(event.target)) setDropdown(button, false); });
   });
   document.querySelectorAll('nav a[href]').forEach(function (link) {
     if (link.getAttribute('href') === window.location.pathname) link.setAttribute('aria-current', 'page');
@@ -68,8 +104,9 @@
     searchButton.addEventListener('click', function () { closeNav(); dialog.showModal(); dialog.querySelector('input').focus(); });
     dialog.querySelector('.search-close').addEventListener('click', function () { dialog.close(); });
     dialog.addEventListener('click', function (event) {
+      if (event.target !== dialog) return;
       var rect = dialog.getBoundingClientRect();
-      if (event.target === dialog && (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom)) dialog.close();
+      if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) dialog.close();
     });
   }
   document.addEventListener('keydown', function (event) {
@@ -88,11 +125,6 @@
     function adaptContents() { toc.open = !compactLayout.matches; }
     adaptContents();
     compactLayout.addEventListener('change', adaptContents);
-  });
-  document.querySelectorAll('.table-scroll').forEach(function (table) {
-    table.tabIndex = 0;
-    table.setAttribute('role', 'region');
-    table.setAttribute('aria-label', 'Technical table; scroll horizontally for more columns');
   });
   function normalize(text) { return text.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim(); }
   document.querySelectorAll('[data-search], .empty-state .search-box').forEach(function (box) {
